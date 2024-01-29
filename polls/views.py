@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from .models import Choice, Question
+from .forms import InputForm
 
 
 def index(request):
@@ -47,3 +48,8 @@ def vote(request, question_id):
 def results(request, question_id):
     question = get_object_or_404(Question, pk=question_id)
     return render(request, "polls/results.html", {"question": question})
+
+def nakedPutOptions(request):
+    context = {}
+    context['form'] = InputForm()
+    return render(request, "polls/nakedPutOptions.html", context)
