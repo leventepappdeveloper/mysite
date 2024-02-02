@@ -25,7 +25,12 @@ SECRET_KEY = 'django-insecure-6wtf%z7xfd0%*ejd_l6l*u*hzdicq64i&m-c6hz5$2%*a$!oll
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', 'optionstester-35e456aae31a.herokuapp.com']
+ALLOWED_HOSTS = [
+    'localhost',
+    '127.0.0.1',
+    'optionstester.com',
+    'optionstester-35e456aae31a.herokuapp.com'
+]
 
 
 # Application definition
@@ -37,7 +42,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'polls.apps.PollsConfig'
+    'polls.apps.PollsConfig',
+    'nakedPutOptionsTester.apps.NakedPutOptionsTesterConfig'
 ]
 
 MIDDLEWARE = [
