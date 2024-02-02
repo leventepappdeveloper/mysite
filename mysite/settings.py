@@ -28,7 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
-    'optionstester.com',
+    'www.optionstester.com',
     'optionstester-35e456aae31a.herokuapp.com'
 ]
 
